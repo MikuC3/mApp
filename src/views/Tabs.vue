@@ -14,7 +14,7 @@
         </ion-tab-button>
         
         <ion-tab-button tab="tab3" href="/tabs/tab3">
-          <ion-icon :icon="people" />
+          <ion-icon :icon="person" />
           <ion-label>ลูกค้า</ion-label>
         </ion-tab-button>
 
@@ -23,6 +23,10 @@
           <ion-label>ข่าวสาร</ion-label>
         </ion-tab-button>
 
+        <ion-tab-button tab="setting" href="/tabs/setting">
+          <ion-icon :icon="settings" />
+          <ion-label>ตั้งค่า</ion-label>
+        </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
   </ion-page>
@@ -30,17 +34,17 @@
 
 <script lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
-import { cart, people, home, newspaper } from 'ionicons/icons';
-
+import { settings, cart, person, home, newspaper } from 'ionicons/icons';
 export default {
   name: 'Tabs',
   components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage, IonRouterOutlet },
   setup() {
     return {
+      settings,
       cart, 
-      people, 
+      person, 
       home,
-      newspaper,
+      newspaper
     }
   }
 }
